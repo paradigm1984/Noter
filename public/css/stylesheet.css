@@ -1,0 +1,113 @@
+/* fonts:
+font-family: 'Baloo Tammudu', cursive;
+font-family: 'Nunito', sans-serif;
+*/
+
+/* colors:
+bright orange: #FFAB18;
+orange creme: #FFC765;
+deep blue: #003E7A;
+baby blue: #A6D0FF;
+*/
+
+/* Global */
+
+body { 
+	padding-top: 50px;
+	
+}
+
+p {
+	font-family: 'Nunito', sans-serif;
+}
+
+
+/* Navbar */
+
+.navbar-custom {
+	background-color: #FFAB18;
+	border-bottom-width: 4px; 
+	border-bottom-color: black;
+	border-bottom-style: solid;
+}
+
+/* Left Panel */
+
+.left-panel {
+	float: left;
+	background-image: url(../images/textured_paper.png);
+	background-repeat: repeat-y repeat-x;
+	height: 800px;
+	width: 40%;
+	display: inline-block;
+	border-width: 0px 1px 4px 0px; 
+	border-color: black;
+	border-style: solid;
+}
+
+.note-list-header {
+	text-align: center;
+	font-family: 'Baloo Tammudu', cursive;
+	color: black;
+
+}
+
+.note-button-container {
+	display: inline-block;
+	width: 100%;
+}
+
+.create-delete-button {
+
+	border-style: none;
+	border-radius: 5px;
+	background-color: #003E7A;
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	font-size: 1.8em;
+	padding: 1% 2%;
+	margin: 2% 10%;
+	float: left;
+}
+
+.create-delete-button-right {
+	float: right;
+}
+
+@media (max-width: 709px) {
+	.create-delete-button {
+
+		font-size: 1.2em;
+		padding: 1% 1.3%;
+		
+	}
+	
+}
+
+/* Right Panel */
+
+.right-panel {
+	float: left;
+	color: blue;
+	height: 800px;
+	width: 60%;
+	display: inline-block;
+	background-image: url(../images/linedpaper.png);
+	background-repeat: repeat-y repeat-x;
+	border-width: 0px 0px 4px 1px; 
+	border-color: black;
+	border-style: solid;
+}
+
+/* Footer */
+
+.footer-container {
+	text-align: center;
+	background-color: #FFC765;
+ 	width: 100%;
+	float: left;
+	padding: 10px;
+	font-family: 'Nunito', sans-serif;
+}
+

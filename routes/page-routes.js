@@ -3,17 +3,45 @@ const router = express.Router();
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");;
 
-
+// Requiring the note model
+const Note = require("../models/note.js")
 
 router.use(bodyParser.json());
 router.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 router.use(bodyParser.urlencoded({ extended: true }));
 
 // Get Homepage
-router.get('/', function (req, res) {
-  res.render('index');
+router.get("/", function (req, res) {
+  res.render("index");
 });
 
+// Add a note to the DB
+router.post("/noteslist/", function (req, res, error) {
+	if(error) {
+		throw error;
+	}
+
+	Note.findOne({title: result.title}, function(error, data) {
+		if(error) {
+			throw error;
+		} else {
+			if(data == null) {
+				var note = new Note(result);
+				article.save(function(error, record) {
+					if(error) {
+						throw error;
+					} 
+					console.log("record was added");
+				});
+			} else {
+				console.log("no record was added because it already exists.");
+			}
+		}
+		console.log("addition completed.");
+	})
+
+  res.redirect("index");
+});
 
 module.exports = router;
 
